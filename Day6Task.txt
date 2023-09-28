@@ -1,0 +1,94 @@
+Task 1:
+--------
+a) Write a constructor for the class Movie, which takes a String representing the title of the movie, a String representing the studio, and a String representing the rating as its arguments, and sets the respective class properties to these values.
+
+class Movie{
+    constructor(title, studio, rating){
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+}
+var firstMovie =  new Movie("Casino Royale", "Eon Productions", "PG13");
+console.log("Title is " + firstMovie.title + "\n" + "Studio is " + firstMovie.studio + "\n"  +"Rating is " + firstMovie.rating)
+
+b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+class Movie{
+    constructor(title, studio, rating){
+        this.title = title;
+        this.studio = studio;
+        this.rating = "PG";
+    }
+}
+c)Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.
+
+class Movie{
+    constructor(title, studio, rating){
+        this.title = title;
+        this.studio = studio;
+        this.rating = "PG";
+    }
+get PG() {
+	return "The rating is  " + this.rating;
+}
+
+}
+var firstMovie = new Movie();
+console.log(firstMovie.PG);
+
+d)Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+
+var firstMovie =  new Movie("Casino Royale", "Eon Productions", "PG13");
+
+TASK-2:
+-------
+class circle{
+    constructor(radius, color){
+           this.radius = radius;
+           this.color = color;
+        }
+         get Radius(){
+           return this.radius ;
+       }
+       set newRadius(modifiedName){
+         this.radius = modifiedName;
+      }
+         get Color(){
+           return this.color ;
+       }
+       set newColor(modName){
+           this.color = modName;
+       }
+       get Area(){
+           var a = (Math.PI * this.radius * this.radius).toFixed(2);
+           return a;
+       }
+       get Circumference(){
+           var b = (2 * Math.PI * this.radius).toFixed(2);
+           return b;
+       }
+        
+}
+var newCircle = new circle(1.0, "red");
+newCircle.newRadius = 4.0;
+newCircle.newColor = "white";
+
+console.log("The new radius of circle is "+ newCircle.Radius);
+console.log("The new color of circle is "+ newCircle.Color);
+console.log("The area of circle is "+ newCircle.Area);
+console.log("The circumference of circle is "+ newCircle.Circumference);
+
+TASK-3:
+----------
+class person{
+    constructor(name, age, gender){
+         this.name = name;
+        this.age = age;
+        this.gender = gender;
+       }
+       get data(){
+           return this.name+ "\n" + this.age + "\n" +this.gender ;
+       }
+}
+var personOne = new person("Deva", 25, "F");
+console.log(personOne.data);
